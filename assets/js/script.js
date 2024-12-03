@@ -2,10 +2,29 @@ const searchFormEl = document.querySelector('#search-form');
 const cityNameEl = document.querySelector('#city-name');
 const currentWeatherEl = document.querySelector('#current-weather');
 const fiveDayEl = document.querySelector('#five-day');
+const savedCitiesEl = document.querySelector('#saved-cities')
 const apiKey = '1aa2d0916f0d2dc957529b88740b6708';
 
 // TODO: Create global array to save city from input textbox. You have to get from localstorage first if it exists, otherwise default it to [].
 // Example: const cityArr= JSON.parse(localstorage.getItem('cities')) || []
+const cityArr = JSON.parse(localStorage.getItem('cities')) || [];
+
+function storeCities() {
+    localStorage.getItem('cities', JSON.stringify(cities))
+}
+
+function displaySavedCities() {
+    savedCitiesEl.innerHTML = '';
+    cityArr.forEach(city => {
+        const cityBtn = document.createElement('button');
+        cityBtn.textContent = city;
+        cityBtn.addEventListener('click', () => {
+            populateCurrentWeather(city);
+            populate5day(city);
+        });
+        savedCitiesEl.appendChild(cityBtn)
+    })
+}
 
 function searchCity(event) {
     event.preventDefault();
@@ -15,7 +34,7 @@ function searchCity(event) {
 }
 
 function populateCurrentWeather(cityName) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityNameEl}&appid=${apiKey}&units=imperial`;
 
     fetch(url)
         .then(function (response) {
@@ -31,7 +50,7 @@ function populateCurrentWeather(cityName) {
 }
 
 function populate5day(cityName) {
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityNameEl}&appid=${apiKey}&units=imperial`
 
     fetch(url)
         .then(function (response) {
@@ -65,5 +84,6 @@ function populate5day(cityName) {
 
 searchFormEl.addEventListener('submit', searchCity);
 
+displaySavedCities();
 populateCurrentWeather('Miami');
 populate5day('Miami')
