@@ -21,91 +21,24 @@
             <h3>Search for a City</h3>
             <form id="search-form">
                 <input id="city-name" type="text" class="form-control">
-                <button class="btn btn-primary w-100 my-3" type="submit">Search</button>
+                <button class="btn btn-primary w-100 my-3">Search</button>
             </form>
             <hr>
 
             <div class="row">
-                <div id="saved-cities" class="col-12">
-                    <button class="btn btn-secondary w-100 my-1">Miami</button>
-                    <button class="btn btn-secondary w-100 my-1">Chicago</button>
-                    <button class="btn btn-secondary w-100 my-1">Boston</button>
-                </div>
+                <div id="saved-cities" class="col-12"></div>
             </div>
         </div>
+
         <div class="col-9">
             <div class="row">
-                <div class="col-10">
-                    <div class="py-3 my-3 mb-4 bg-body-tertiary border rounded-3">
-                        <div id="current-weather" class="container-fluid">
-                            <h3>Miami (11/5/2024) <img src="https://openweathermap.org/img/wn/01d@2x.png" alt=""></h3>
-                            <p> Temp: <span>82 °f</span></p>
-                            <p> Wind: <span>6 MPH</span></p>
-                            <p> Humidity: <span>85 %</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h4>5-Day Forecast:</h4>
-            <div id="five-day" class="row">
-                <div class="col-sm-2 mb-3 mb-sm-0">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">11/6/2024</h5>
-                            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                            <p> Temp: <span>82 °f</span></p>
-                            <p> Wind: <span>6 MPH</span></p>
-                            <p> Humidity: <span>85 %</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">11/7/2024</h5>
-                            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                            <p> Temp: <span>82 °f</span></p>
-                            <p> Wind: <span>6 MPH</span></p>
-                            <p> Humidity: <span>85 %</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">11/8/2024</h5>
-                            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                            <p> Temp: <span>82 °f</span></p>
-                            <p> Wind: <span>6 MPH</span></p>
-                            <p> Humidity: <span>85 %</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">11/9/2024</h5>
-                            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                            <p> Temp: <span>82 °f</span></p>
-                            <p> Wind: <span>6 MPH</span></p>
-                            <p> Humidity: <span>85 %</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">11/10/2024</h5>
-                            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="">
-                            <p> Temp: <span>82 °f</span></p>
-                            <p> Wind: <span>6 MPH</span></p>
-                            <p> Humidity: <span>85 %</span></p>
-                        </div>
-                    </div>
-                </div>
+                <div id="current-weather" class="col-10 border my-3"></div>
+                <h4>5-Day Forecast:</h4>
+                <div id="five-day" class="row"></div>
             </div>
         </div>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
