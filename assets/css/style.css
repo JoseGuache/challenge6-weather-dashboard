@@ -1,0 +1,12 @@
+* {
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.card-body {
+    background-color: dimgray;
+}
+
+#current-weather {
+    background-color: #fff;
+}
