@@ -22,7 +22,21 @@ This is a simple weather app that allows the user to search up a city to see the
 
 ## Screenshot
 
+![alt text] (./assets/images/screenshotChallenge6.png)
+
+---
+
+**Repo:**
+
+[Github Repo](https://github.com/JoseGuache/challenge6-weather-dashboard)
+
+**Live Link:**
+
+[Live Page](https://joseguache.github.io/challenge6-weather-dashboard/)
+
 ## Credits
+
+I used https://cssgradient.io/ for help with achieving the gradiant look that you see on the Dashboard.
 
 ## License
 
