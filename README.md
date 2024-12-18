@@ -22,7 +22,7 @@ This is a simple weather app that allows the user to search up a city to see the
 
 ## Screenshot
 
-![alt text] (./assets/images/screenshotChallenge6.png)
+<img width="1478" alt="screenshotChallenge6" src="https://github.com/user-attachments/assets/52ee470f-8034-452a-b678-b15d85d2df72" />
 
 ---
 
